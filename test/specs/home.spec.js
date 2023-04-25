@@ -9,8 +9,11 @@ describe('Exercise 11', () => {
     })
     it('should fail array size of 45', async() => {
         await expect(homePage.listExamples).not.toBeElementsArrayOfSize(45);
+    })
 
-
+    it('should check >= array size of 1', async() => {
+        await expect(homePage.listExamples).toBeElementsArrayOfSize ({gte: 1});
 
     })
+
 })
